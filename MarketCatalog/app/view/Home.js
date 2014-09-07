@@ -21,7 +21,10 @@ Ext.define('MarketCatalog.view.Home', {
                 itemId: 'home_info_page',
                 title: 'مبلمان امینی',
                 iconCls: 'home',
-                align: 'right',
+                align: 'center',
+                margin: '0 auto',
+
+                maxWidth: '400px',
 
                 styleHtmlContent: true,
                 scrollable: true,
@@ -82,25 +85,25 @@ Ext.define('MarketCatalog.view.Home', {
                                 value: '021-66666666',
                                 style: 'text-align:right',
                                 readOnly: true
-                            },
-                            {
-                                xtype: 'image',
-                                margin: '20',
-                                src: 'resources/images/map.jpg',
-                                style: ' vertical-align: middle; text-align: center',
-                                height: 300,
-                                align: 'center'
-                            },
-                            {
-                                xtype: 'button',
-                                id: 'product_but',
-                                text: 'مشاهده محصولات',
-                                action: 'openList',
-                                width: '50%',
-                                style: ' margin:0 auto; margin-bottom:20px; text-align: center'
                             }
                         ]
-                    }
+                    },
+                    {
+                        xtype: 'image',
+                        margin: '0 auto',
+                        src: 'resources/images/map.jpg',
+//                        style: ' vertical-align: middle; text-align: center',
+                        height: '300px',
+                        align: 'center'
+                    }/*,
+                    {
+                        xtype: 'button',
+                        id: 'product_but',
+                        text: 'مشاهده محصولات',
+                        action: 'openList',
+                        width: '50%',
+                        style: ' margin:0 auto; margin-bottom:20px; text-align: center'
+                    }*/
                 ]
             },
 
