@@ -1,0 +1,214 @@
+// The following two lines import the default Sencha Touch theme. If you are building
+// a new theme, remove them and the add your own CSS on top of the base CSS (which
+// is already included in your app.json file).
+
+//$active-color
+//$alert-color
+//$base-color: #a14dcc;
+//$base-gradient
+//$bright-color
+//$button-gradient
+//$button-height
+//$button-radius
+//$button-stroke-weight
+//$carousel-indicator-size
+//$carousel-indicator-spacing
+//$carousel-track-size
+//$form-bg-color
+//$form-dark
+//$form-field-bg-color
+//$form-field-height
+//$form-fieldset-radius
+//$form-label-width
+//$form-light
+//$form-slider-size
+//$form-spacing
+//$form-textarea-height
+//$form-thumb-size
+//$form-thumb-space
+//$form-toggle-size
+//$global-row-height
+//$include-bottom-tabs
+//$include-button-uis
+$include_default_icons: true;
+//$include-default-uis
+//$include-form-sliders
+//$include-highlights
+//$include-html-style
+$include-tabbar-uis: true;
+$include-toolbar-uis: true;
+//$include-top-tabs
+//$light-tab-active
+//$light-tab-color
+//$page-bg-color
+//$sheet-bg-color
+//$sheet-button-spacing
+//$sheet-padding
+//$tabs-bottom-active-gradient
+//$tabs-bottom-icon-size
+//$tabs-bottom-gradient
+//$tabs-bottom-radius
+//$tabs-dark-active-color
+//$tabs-dark-color
+//$toolbar-gradient:
+//$toolbar-highlights
+//$toolbar-icon-size
+//$toolbar-input-bg
+//$toolbar-input-color
+//$toolbar-input-height
+//$toolbar-spacing
+//$top-tab-height
+// Define variable in sass
+
+// Base Color
+$base-color: #edd5f4;
+$active-color: #cb16ed;
+// Base Gradient Style
+$base-gradient: 'bevel';
+//matte, bevel,glossy,recessed
+$toolbar-gradient: $base-gradient;
+
+$background-color: #44ff00;
+$foreground-color: #f0f099;
+$primary-text-color: #f00;
+
+// Custome Panel Color
+$page-bg-color: #edd5f4;
+$form-field-bg-color: #ff3cff;
+$form-field-color: #003c97;
+$tabs-dark: #7d3c97;
+$list-bg-color: #edd5f4;
+$list-active-color: darken($list-bg-color, 5%) !default;
+$list-pressed-color: darken(saturate($list-bg-color, 55%), 10%) !default;
+
+// Define custom Font Size
+$app-base-font-base: 15px;
+$app-base-font-smallest: 13px;
+
+$toolbar-base-color: $base-color;
+$neutral-color: #ecd1ee;
+$form-bg-color: #edd5f4;
+$form-light: darken($form-bg-color, 12%) !default;
+$form-dark: darken($form-bg-color, 22%) !default;
+$form-fieldset-inner: lighten($form-bg-color, 5%) !default;
+
+////$base-color: #1985D0 !default;
+//$active-color: darken(saturate($base-color, 55%), 10%) !default;
+//$neutral-color: #e0e0e0;
+//$base-gradient: 'glossy'!default;
+$font-family: byekan !default;
+//$page-bg-color: #eee !default;
+//$alert-color: red !default;
+//$confirm-color: #92cf00 !default;
+//$global-row-height: 2.6em !default;
+
+// Importing Default Sass
+@import 'sencha-touch/default';
+@import 'sencha-touch/default/all';
+
+// Custom code goes here..
+
+// Examples of using the icon mixin:
+// @include icon('user');
+// @include icon('shop1');
+
+@include sencha-toolbar-ui('sencha', $tabs-dark, $toolbar-gradient);
+//
+@include sencha-button-ui('normal', $form-light, $toolbar-gradient);
+
+// overriding css-debug
+//@include toolbar-button($base-color,  $base-gradient);
+
+@include icon-font('byekan', inline-font-files('farsi-fonts/BYekan.woff', woff, 'farsi-fonts/BYekan.ttf', truetype, 'farsi-fonts/BYekan.eot', eot, 'farsi-fonts/BYekan.svg', svg));
+
+//.x-tabbar-dark, .x-toolbar {
+//  @include background(linear-gradient(color-stops($base-color, #ff00ff)));
+//}
+
+* {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  //font-family: byekan
+}
+
+input, input[type="password"], input[type="search"] {
+  background-color: transparent;
+  background-image: none;
+}
+
+.x-tab .x-button-icon.products {
+  background-image: url('../images/icons/shop1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.x-form-fieldset-inner {
+  background: $form-fieldset-inner !important;
+}
+
+.update-text-red-right input {
+  text-align: right;
+  color: red;
+}
+
+.update-text-green-right input {
+  text-align: right;
+  color: green;
+}
+
+.align-text-right input {
+  text-align: right;
+  direction: rtl;
+}
+
+.catalog-item {
+  direction: rtl;
+}
+
+.catalog-item img {
+  border-radius: 5px;
+  float: right;
+  height: 50px;
+  width: 50px;
+}
+
+.catalog-item h2 {
+  font-weight: bold;
+  padding-bottom: 3px
+}
+
+.tweet {
+  font-size: 70%;
+  margin-right: 60px;
+  color: #333;
+  min-height: 50px
+}
+
+.posted {
+  float: right
+}
+
+.x-list-header {
+  direction: rtl;
+}
+
+.image_prev {
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+.image_prev .img {
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+.image_thumb {
+  padding: 0;
+  margin: 0 5px;
+  border: 0 1px;
+  border-style: solid;
+  border-color: blue;
+}

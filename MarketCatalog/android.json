@@ -1,0 +1,19 @@
+{
+    "applicationName": "MarketCatalog",
+    "applicationId": "com.senchatouch.app",
+    "outputPath": "../build/",
+    "iconName": "123",
+    "versionString": "1.0",
+    "inputPath": "./",
+    "configuration": "Release",
+    "platform": "Android",
+    "certificatePath": "E:\\Wamp\\www\\my-release-key.keystore",
+    "certificateAlias": "alias_name",
+    "sdkPath": "E:/Android/android-sdk",
+    "orientations": [
+        "portrait",
+        "landscapeLeft",
+        "landscapeRight",
+        "portraitUpsideDown"
+    ],
+}
